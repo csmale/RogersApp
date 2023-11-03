@@ -1,11 +1,18 @@
 {
   "expo": {
-    "name": "test5",
-    "slug": "test5",
-    "version": "1.0.0",
+    "name": "GateMaster",
+    "slug": "GateMaster",
+    "version": "0.0.1",
+    "icon": "./images/icon.png",
     "assetBundlePatterns": [
       "**/*"
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "bc287c66-ae4b-4aab-aa0c-402d49a2f85f"
+      }
+    }
   },
-  "name": "test5"
+  "name": "GateMaster",
+  "android.config.googleMaps.apiKey": "AIzaSyBqJGt51YpttKhVRATWqAR7Il4MjrzhwS8"
 }
