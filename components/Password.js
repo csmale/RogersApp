@@ -2,7 +2,6 @@ import { StyleSheet, View, TextInput, Text } from "react-native";
 import { useState } from 'react';
 
 export default function Password(props) {
-    const [text, onChangeText] = useState(props.value);
     return (
         <View style={styles.container}>
             <View style={{ alignItems: 'left' }}>
@@ -10,10 +9,10 @@ export default function Password(props) {
             </View>
             <TextInput style={styles.input}
                 placeholder={props.placeholder}
-                value={text}
+                value={props.value}
                 inputMode={props.inputMode}
                 secureTextEntry={true}
-                onChangeText={onChangeText}
+                onChangeText={props.onChangeText}
             />
         </View>
     );

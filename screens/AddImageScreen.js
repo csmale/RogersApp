@@ -5,7 +5,7 @@ import AppContext from '../components/AppContext.js';
 import { useContext } from 'react';
 import MyButton from '../components/MyButton.js';
 
-export default function VehicleListScreen(props) {
+export default function AddImageScreen(props) {
   const myContext = useContext(AppContext);
 
   return (

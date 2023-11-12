@@ -11,7 +11,9 @@ import VehicleListScreen from './screens/VehicleListScreen';
 import SignupScreen from './screens/SignupScreen';
 import SearchScreen from './screens/SearchScreen';
 import ResultsScreen from './screens/ResultsScreen';
-import DestDetailsScreen from './screens/DestDetails';
+import DestDetailsScreen from './screens/DestDetailsScreen';
+import EditDestScreen from './screens/EditDestScreen';
+import NavigateScreen from './screens/NavigateScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -69,6 +71,8 @@ export default function App() {
           <Tab.Screen name="Signup" component={SignupScreen} />
           <Tab.Screen name="Results" component={ResultsScreen} />
           <Tab.Screen name="DestDetails" component={DestDetailsScreen} />
+          <Tab.Screen name="EditDest" component={EditDestScreen} />
+          <Tab.Screen name="Navigate" component={NavigateScreen} />
         </Tab.Navigator>
       </NavigationContainer>
     </AppContext.Provider>

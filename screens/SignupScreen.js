@@ -12,7 +12,7 @@ export default function SignupScreen(props) {
     <View style={styles.container}>
       <Text>Signup Screen</Text>
       <Text>{myContext.UserCompany}</Text>
-      <MyButton caption="Done" target='Start' {...props} />
+      <MyButton caption="Done" onPress={()=>props.navigation.navigate('Start')} {...props} />
     </View>
   );
 }

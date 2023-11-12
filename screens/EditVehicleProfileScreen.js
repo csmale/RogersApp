@@ -5,14 +5,14 @@ import AppContext from '../components/AppContext.js';
 import { useContext } from 'react';
 import MyButton from '../components/MyButton.js';
 
-export default function VehicleListScreen(props) {
+export default function EditVehicleProfile(props) {
   const myContext = useContext(AppContext);
 
   return (
     <View style={styles.container}>
       <Text>Vehicle list for {myContext.UserName}</Text>
       <Text>{myContext.UserCompany}</Text>
-      <MyButton caption="Done" onPress={()=>props.navigation.navigate('Main')} {...props} />
+      <MyButton caption="Done" onPress={()=>navigation.navigate('Main')} {...props} />
     </View>
   );
 }

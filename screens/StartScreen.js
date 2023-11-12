@@ -10,7 +10,7 @@ import { useContext } from 'react';
 
 export default function StartScreen(props) {
     const myContext = useContext(AppContext);
-
+    const navigation = props.navigation;
     return (
         <View style={styles.container}>
             <Image style={styles.image} source={require('../images/splash.jpg')} />
@@ -18,17 +18,15 @@ export default function StartScreen(props) {
             <Text style={styles.text}>Please log in to the application</Text>
             <MyInput label='User name:' placeholder='username' value={myContext.UserLogin} inputMode='email' onChangeText={myContext.setUserLogin}></MyInput>
             <Password label='Password:' placeholder='password' value=''></Password>
-            <MyButton caption='Sign in' target='Main' {...props} />
+            <MyButton caption='Sign in' onPress={()=>navigation.navigate('Main')} {...props} />
             <Text style={styles.text}>Don't have an account yet?&nbsp;&nbsp;
                 <Pressable
-                    onPress={({ navigation }) =>
-                        props.navigation.navigate('Signup')
-                    }>
+                    onPress={()=>navigation.navigate('Signup')}>
                     <Text style={styles.signup}>Sign up</Text>
                 </Pressable>
             </Text>
-            <ImageButton caption='Google' image={require('../images/login_google.png')} target='Main' {...props} />
-            <ImageButton caption='Twitter' image={require('../images/login_microsoft.png')} target='Main' {...props} />
+            <ImageButton caption='Google' image={require('../images/login_google.png')} onPress={()=>navigation.navigate('Main')} {...props} />
+            <ImageButton caption='Twitter' image={require('../images/login_microsoft.png')} onPress={()=>navigation.navigate('Main')} {...props} />
         </View>
     );
 }

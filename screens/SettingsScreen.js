@@ -12,7 +12,7 @@ export default function SettingsScreen(props) {
     <View style={styles.container}>
       <Text>Setting for {myContext.UserName}</Text>
       <Text>{myContext.UserCompany}</Text>
-      <MyButton caption="Done" target='Main' {...props} />
+      <MyButton caption="Done" onPress={()=>props.navigation.navigate('Main')} {...props} />
     </View>
   );
 }

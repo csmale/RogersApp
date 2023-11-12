@@ -2,7 +2,6 @@ import { StyleSheet, View, TextInput, Text } from "react-native";
 import { useState } from 'react';
 
 export default function MyInput(props) {
-    // const [text, onChangeText] = useState(props.value);
     return (
         <View style={styles.container}>
             <View style={{alignItems: 'left'}}>

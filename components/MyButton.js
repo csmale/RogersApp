@@ -8,9 +8,7 @@ export default function MyButton(props) {
                 <Button style={styles.button}
                     title={props.caption}
                     color="#e79065"
-                    onPress={() =>
-                        props.navigation.navigate(props.target)
-                    }
+                    onPress={props.onPress}
                 />
             </Pressable>
         </View>

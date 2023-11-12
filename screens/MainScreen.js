@@ -62,6 +62,7 @@ export default function MainScreen(props) {
         </MapView>
       </View>
   */
+ const navigation = props.navigation;
   return (
     <View style={styles.container}>
 
@@ -69,9 +70,9 @@ export default function MainScreen(props) {
       <Text>Logged in as {myContext.UserLogin}</Text>
       <Text>{myContext.UserCompany}</Text>
       <Text>Lat: {myContext.SearchLat.toString()} Lon: {myContext.SearchLon.toString()}</Text>
-      <MyButton caption='Destination' target='Search' {...props} />
-      <MyButton caption='Vehicle' target='VehicleList' {...props} />
-      <MyButton caption='Settings' target='Settings' {...props} />
+      <MyButton caption='Destination' onPress={()=>navigation.navigate('Search')} {...props} />
+      <MyButton caption='Vehicle' onPress={()=>navigation.navigate('VehicleList')} {...props} />
+      <MyButton caption='Settings' onPress={()=>navigation.navigate('Settings')} {...props} />
     </View>
   );
 }

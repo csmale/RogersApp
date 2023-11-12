@@ -5,16 +5,14 @@ import AppContext from '../components/AppContext.js';
 import { useContext } from 'react';
 import MyButton from '../components/MyButton.js';
 
-export default function DestDetailsScreen(props) {
+export default function SelectImageScreen(props) {
   const myContext = useContext(AppContext);
 
   return (
     <View style={styles.container}>
-      <Text>Destination Details {myContext.UserName}</Text>
+      <Text>Select Image for {myContext.UserName}</Text>
       <Text>{myContext.UserCompany}</Text>
-      <Text>Site: {myContext.SelectedSite}</Text>
-      <MyButton caption="Confirm" target='Main' {...props} />
-      <MyButton caption="Return to results" target='Results' {...props} />
+      <MyButton caption="Done" onPress={()=>navigation.navigate('Main')} {...props} />
     </View>
   );
 }

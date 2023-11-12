@@ -4,9 +4,7 @@ export default function ImageButton(props) {
     return (
         <View style={styles.container}>
             <Pressable
-                onPress={() =>
-                    props.navigation.navigate(props.target)
-                }>
+                onPress={props.onPress}>
                 <Image style={styles.image} source={props.image}
                 />
             </Pressable>
